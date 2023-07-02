@@ -1,0 +1,43 @@
+{
+  "name": "clsxov",
+  "version": "1.0.0",
+  "repository": "vltansky/clsxov",
+  "description": "clsx + twMerge",
+  "module": "dist/clsxov.m.js",
+  "unpkg": "dist/clsxov.min.js",
+  "main": "dist/clsxov.js",
+  "types": "clsxov.d.ts",
+  "license": "MIT",
+  "author": {
+    "name": "Vlad Tansky",
+    "email": "vl.tansky@gmail.com",
+    "url": "https://twitter.com/vltansky"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "test": "uvu -r esm test"
+  },
+  "files": [
+    "*.d.ts",
+    "dist"
+  ],
+  "keywords": [
+    "classes",
+    "classname",
+    "classnames",
+    "clsx",
+    "tailwindcss",
+    "twmerge"
+  ],
+  "devDependencies": {
+    "esm": "3.2.25",
+    "terser": "4.8.0",
+    "uvu": "0.5.4"
+  },
+  "dependencies": {
+    "clsx": "^1.2.1",
+    "tailwind-merge": "^1.13.2"
+  }
+}

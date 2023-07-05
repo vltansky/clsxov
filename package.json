@@ -1,11 +1,10 @@
 {
   "name": "clsxov",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": "vltansky/clsxov",
   "description": "clsx + twMerge",
-  "module": "dist/clsxov.m.js",
-  "unpkg": "dist/clsxov.min.js",
-  "main": "dist/clsxov.js",
+  "module": "dist/index.js",
+  "main": "dist/index.js",
   "types": "clsxov.d.ts",
   "license": "MIT",
   "author": {

@@ -5,7 +5,7 @@ export default {
   output: [
     {
       dir: "build",
-      format: "cjs",
+      format: "esm",
     },
   ],
   plugins: [typescript()],

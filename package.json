@@ -1,6 +1,6 @@
 {
   "name": "clsxov",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "clsx + twMerge",
   "keywords": [
     "classes",
@@ -17,7 +17,12 @@
   },
   "repository": "https://github.com/vltansky/clsxov",
   "type": "module",
-  "exports": "./build/index.js",
+  "exports": {
+    ".": {
+      "require": "./index.cjs",
+      "import": "./index.mjs"
+    }
+  },
   "types": "./build/index.d.ts",
   "license": "MIT",
   "engines": {
@@ -32,13 +37,15 @@
     "access": "public"
   },
   "files": [
-    "build/",
+    "dist/",
     "!**/*.test.*",
     "LICENSE",
     "README.md"
   ],
   "scripts": {
-    "build": "rollup -c",
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "watch": "npm run build -- --watch src",
+    "prepublishOnly": "npm run build",
     "lint": "eslint src --ext .ts --fix",
     "lint:check": "eslint src --ext .ts",
     "test": "vitest run",
@@ -46,15 +53,13 @@
     "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
-    "@rollup/plugin-typescript": "^11.1.2",
     "clsx": "^1.2.1",
     "tailwind-merge": "^1.13.2"
   },
   "devDependencies": {
     "@types/node": "^18.16.3",
     "prettier": "^3.0.0",
-    "rollup": "^3.26.1",
-    "tslib": "^2.6.0",
+    "tsup": "^7.1.0",
     "typescript": "^5.1.6",
     "vitest": "^0.32.4"
   }

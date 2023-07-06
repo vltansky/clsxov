@@ -1,4 +1,7 @@
 {
+  // only use words from .cspell.json
+  "cSpell.userWords": [],
+  "cSpell.enabled": true,
   "editor.formatOnSave": true,
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true

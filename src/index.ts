@@ -1,1 +1,1 @@
-export * from './lib/clsxov';
+export * from './clsxov.js';
